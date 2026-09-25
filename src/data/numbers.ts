@@ -1,11 +1,17 @@
 import type { PhoneNumber, SmsMessage } from '../types';
 
 export const phoneNumbers: PhoneNumber[] = [
+  // Gratis
   { id: 'us-1', country: 'Estados Unidos', countryCode: 'US', flag: '🇺🇸', number: '+1 385 123 4567', type: 'gratis', online: true, messagesReceived: 1284 },
   { id: 'uk-1', country: 'Reino Unido', countryCode: 'GB', flag: '🇬🇧', number: '+44 7700 900123', type: 'gratis', online: true, messagesReceived: 892 },
   { id: 'se-1', country: 'Suecia', countryCode: 'SE', flag: '🇸🇪', number: '+46 70 123 4567', type: 'gratis', online: false, messagesReceived: 445 },
   { id: 'nl-1', country: 'Países Bajos', countryCode: 'NL', flag: '🇳🇱', number: '+31 6 1234 5678', type: 'gratis', online: true, messagesReceived: 678 },
   { id: 'fi-1', country: 'Finlandia', countryCode: 'FI', flag: '🇫🇮', number: '+358 40 123 4567', type: 'gratis', online: true, messagesReceived: 312 },
+  { id: 'pl-1', country: 'Polonia', countryCode: 'PL', flag: '🇵🇱', number: '+48 512 345 678', type: 'gratis', online: true, messagesReceived: 521 },
+  { id: 'no-1', country: 'Noruega', countryCode: 'NO', flag: '🇳🇴', number: '+47 412 34 567', type: 'gratis', online: false, messagesReceived: 198 },
+  { id: 'ro-1', country: 'Rumanía', countryCode: 'RO', flag: '🇷🇴', number: '+40 712 345 678', type: 'gratis', online: true, messagesReceived: 387 },
+
+  // Premium
   { id: 'es-1', country: 'España', countryCode: 'ES', flag: '🇪🇸', number: '+34 612 345 678', type: 'premium', online: true, messagesReceived: 1567 },
   { id: 'mx-1', country: 'México', countryCode: 'MX', flag: '🇲🇽', number: '+52 55 1234 5678', type: 'premium', online: true, messagesReceived: 2103 },
   { id: 'de-1', country: 'Alemania', countryCode: 'DE', flag: '🇩🇪', number: '+49 151 2345 6789', type: 'premium', online: true, messagesReceived: 1890 },
@@ -13,6 +19,13 @@ export const phoneNumbers: PhoneNumber[] = [
   { id: 'it-1', country: 'Italia', countryCode: 'IT', flag: '🇮🇹', number: '+39 320 123 4567', type: 'premium', online: true, messagesReceived: 721 },
   { id: 'br-1', country: 'Brasil', countryCode: 'BR', flag: '🇧🇷', number: '+55 11 91234 5678', type: 'premium', online: true, messagesReceived: 1342 },
   { id: 'ar-1', country: 'Argentina', countryCode: 'AR', flag: '🇦🇷', number: '+54 9 11 1234 5678', type: 'premium', online: true, messagesReceived: 876 },
+  { id: 'co-1', country: 'Colombia', countryCode: 'CO', flag: '🇨🇴', number: '+57 312 345 6789', type: 'premium', online: true, messagesReceived: 645 },
+  { id: 'cl-1', country: 'Chile', countryCode: 'CL', flag: '🇨🇱', number: '+56 9 1234 5678', type: 'premium', online: false, messagesReceived: 412 },
+  { id: 'pe-1', country: 'Perú', countryCode: 'PE', flag: '🇵🇪', number: '+51 912 345 678', type: 'premium', online: true, messagesReceived: 389 },
+  { id: 'ca-1', country: 'Canadá', countryCode: 'CA', flag: '🇨🇦', number: '+1 416 234 5678', type: 'premium', online: true, messagesReceived: 1023 },
+  { id: 'au-1', country: 'Australia', countryCode: 'AU', flag: '🇦🇺', number: '+61 412 345 678', type: 'premium', online: true, messagesReceived: 687 },
+  { id: 'jp-1', country: 'Japón', countryCode: 'JP', flag: '🇯🇵', number: '+81 90 1234 5678', type: 'premium', online: true, messagesReceived: 456 },
+  { id: 'in-1', country: 'India', countryCode: 'IN', flag: '🇮🇳', number: '+91 98765 43210', type: 'premium', online: true, messagesReceived: 2341 },
 ];
 
 export const sampleMessages: Record<string, SmsMessage[]> = {
@@ -35,6 +48,12 @@ export const sampleMessages: Record<string, SmsMessage[]> = {
   ],
   'fi-1': [
     { id: 'm10', phoneNumberId: 'fi-1', sender: 'OpenAI', body: 'Your ChatGPT verification code is: 582019', receivedAt: '2026-09-25T10:15:00Z' },
+  ],
+  'pl-1': [
+    { id: 'm11b', phoneNumberId: 'pl-1', sender: 'Netflix', body: 'Netflix: 482910 is your verification code.', receivedAt: '2026-09-25T10:22:00Z' },
+  ],
+  'ro-1': [
+    { id: 'm12b', phoneNumberId: 'ro-1', sender: 'WhatsApp', body: 'Your WhatsApp code: 729103', receivedAt: '2026-09-25T10:10:00Z' },
   ],
   'es-1': [
     { id: 'm11', phoneNumberId: 'es-1', sender: 'WhatsApp', body: 'Tu código de WhatsApp es: 472910. No lo compartas.', receivedAt: '2026-09-25T10:48:00Z' },
@@ -62,6 +81,22 @@ export const sampleMessages: Record<string, SmsMessage[]> = {
   'ar-1': [
     { id: 'm22', phoneNumberId: 'ar-1', sender: 'MercadoPago', body: 'Tu código de MercadoPago es 472819', receivedAt: '2026-09-25T10:38:00Z' },
   ],
+  'co-1': [
+    { id: 'm23', phoneNumberId: 'co-1', sender: 'WhatsApp', body: 'Tu código de WhatsApp es: 829301', receivedAt: '2026-09-25T10:42:00Z' },
+  ],
+  'ca-1': [
+    { id: 'm24', phoneNumberId: 'ca-1', sender: 'Steam', body: 'Steam Guard code: WB3R9', receivedAt: '2026-09-25T10:28:00Z' },
+  ],
+  'au-1': [
+    { id: 'm25', phoneNumberId: 'au-1', sender: 'WhatsApp', body: 'Your WhatsApp code: 472910', receivedAt: '2026-09-25T10:18:00Z' },
+  ],
+  'jp-1': [
+    { id: 'm26', phoneNumberId: 'jp-1', sender: 'LINE', body: 'LINE verification code: 729103', receivedAt: '2026-09-25T10:33:00Z' },
+  ],
+  'in-1': [
+    { id: 'm27', phoneNumberId: 'in-1', sender: 'WhatsApp', body: 'Your WhatsApp code: 382910', receivedAt: '2026-09-25T10:48:00Z' },
+    { id: 'm28', phoneNumberId: 'in-1', sender: 'Paytm', body: 'Paytm OTP: 482910. Do not share.', receivedAt: '2026-09-25T10:20:00Z' },
+  ],
 };
 
 export function getNumberById(id: string): PhoneNumber | undefined {
@@ -70,4 +105,8 @@ export function getNumberById(id: string): PhoneNumber | undefined {
 
 export function getMessagesForNumber(id: string): SmsMessage[] {
   return sampleMessages[id] ?? [];
+}
+
+export function getUniqueCountries(): string[] {
+  return [...new Set(phoneNumbers.map((n) => n.country))].sort();
 }

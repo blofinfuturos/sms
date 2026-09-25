@@ -17,7 +17,7 @@ export default function NumberCard({ phone }: { phone: PhoneNumber }) {
   return (
     <Link
       to={`/numero/${phone.id}`}
-      className="group block rounded-2xl border border-slate-200 bg-white p-5 transition-all hover:border-slate-300 hover:shadow-lg animate-slide-up"
+      className="card group block p-5 transition-all hover:border-brand-300 hover:shadow-lg animate-slide-up"
     >
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
@@ -28,23 +28,17 @@ export default function NumberCard({ phone }: { phone: PhoneNumber }) {
           </div>
         </div>
         {phone.type === 'premium' ? (
-          <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700">
-            Premium
-          </span>
+          <span className="badge bg-amber-100 text-amber-700">Premium</span>
         ) : (
-          <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700">
-            Gratis
-          </span>
+          <span className="badge bg-emerald-100 text-emerald-700">Gratis</span>
         )}
       </div>
 
       <div className="mt-4 flex items-center justify-between">
         <div className="flex items-center gap-1 text-xs text-slate-500">
-          <span className="flex items-center gap-1">
-            <span className={`flex items-center gap-0.5 font-medium ${phone.online ? 'text-emerald-600' : 'text-slate-400'}`}>
-              <Dot size={16} className={phone.online ? 'text-emerald-500' : 'text-slate-400'} />
-              {phone.online ? 'En línea' : 'Ocupado'}
-            </span>
+          <span className={`flex items-center gap-0.5 font-medium ${phone.online ? 'text-emerald-600' : 'text-slate-400'}`}>
+            <Dot size={16} className={phone.online ? 'text-emerald-500' : 'text-slate-400'} />
+            {phone.online ? 'En línea' : 'Ocupado'}
           </span>
           <span className="mx-1.5 text-slate-300">|</span>
           <span className="flex items-center gap-1">
